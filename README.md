@@ -1,47 +1,96 @@
-# Voting App Backend
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting App Backend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2, h3 {
+            color: #34495e;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
 
-Welcome to the **Voting App backend**! This application allows users to register, log in, and vote for candidates in an election. The backend is built using **Node.js**, **Express**, and **MongoDB**.
+    <h1>Voting App Backend</h1>
+    <p>Welcome to the <strong>Voting App backend</strong>! This application allows users to register, log in, and vote for candidates in an election. The backend is built using <strong>Node.js</strong>, <strong>Express</strong>, and <strong>MongoDB</strong>.</p>
 
-## Table of Contents
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#technologies-used">Technologies Used</a></li>
+        <li><a href="#api-endpoints">API Endpoints</a>
+            <ul>
+                <li><a href="#user-endpoints">User Endpoints</a></li>
+                <li><a href="#candidate-endpoints">Candidate Endpoints</a></li>
+            </ul>
+        </li>
+        <li><a href="#middleware">Middleware</a></li>
+        <li><a href="#database-connection">Database Connection</a></li>
+        <li><a href="#environment-variables">Environment Variables</a></li>
+    </ul>
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Technologies Used](#technologies-used)
-- [API Endpoints](#api-endpoints)
-  - [User Endpoints](#user-endpoints)
-  - [Candidate Endpoints](#candidate-endpoints)
-- [Middleware](#middleware)
-- [Database Connection](#database-connection)
-- [Environment Variables](#environment-variables)
+    <h2 id="features">Features</h2>
+    <ul>
+        <li>User registration and login</li>
+        <li>Candidate management (create, update, delete)</li>
+        <li>Voting system</li>
+        <li>Vote counting</li>
+        <li>Secure user authentication</li>
+    </ul>
 
-## Features
+    <h2 id="getting-started">Getting Started</h2>
 
-- User registration and login
-- Candidate management (create, update, delete)
-- Voting system
-- Vote counting
-- Secure user authentication
+    <h3>Prerequisites</h3>
+    <p>Before you begin, ensure you have met the following requirements:</p>
+    <ul>
+        <li><strong>Node.js</strong> (version >= 14)</li>
+        <li><strong>MongoDB</strong> (installed and running)</li>
+        <li><strong>NPM</strong> (Node Package Manager)</li>
+    </ul>
 
-## Getting Started
-
-### Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-- **Node.js** (version >= 14)
-- **MongoDB** (installed and running)
-- **NPM** (Node Package Manager)
-
-### Installation
-
-Follow these steps to set up the project:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/voting-app-backend.git
-   cd voting-app-backend
-
+    <h3>Installation</h3>
+    <p>Follow these steps to set up the project:</p>
     <ol>
+        <li>Clone the repository:
+            <pre><code>git clone https://github.com/yourusername/voting-app-backend.git
+cd voting-app-backend</code></pre>
+        </li>
         <li><strong>Install dependencies</strong>:
             <pre><code>npm install</code></pre>
         </li>
@@ -55,7 +104,7 @@ MONGODB_URI=mongodb://&lt;username&gt;:&lt;password&gt;@localhost:27017/votingap
         <li>The server will be running on <code>http://localhost:5000</code>.</li>
     </ol>
 
-    <h2>Technologies Used</h2>
+    <h2 id="technologies-used">Technologies Used</h2>
     <p>This project is built using the following technologies:</p>
     <ul>
         <li><strong>Node.js</strong></li>
@@ -66,9 +115,9 @@ MONGODB_URI=mongodb://&lt;username&gt;:&lt;password&gt;@localhost:27017/votingap
         <li><strong>JWT</strong> (JSON Web Tokens) for authentication</li>
     </ul>
 
-    <h2>API Endpoints</h2>
+    <h2 id="api-endpoints">API Endpoints</h2>
 
-    <h3>User Endpoints</h3>
+    <h3 id="user-endpoints">User Endpoints</h3>
     <table>
         <thead>
             <tr>
@@ -101,7 +150,7 @@ MONGODB_URI=mongodb://&lt;username&gt;:&lt;password&gt;@localhost:27017/votingap
         </tbody>
     </table>
 
-    <h3>Candidate Endpoints</h3>
+    <h3 id="candidate-endpoints">Candidate Endpoints</h3>
     <table>
         <thead>
             <tr>
@@ -144,13 +193,13 @@ MONGODB_URI=mongodb://&lt;username&gt;:&lt;password&gt;@localhost:27017/votingap
         </tbody>
     </table>
 
-    <h2>Middleware</h2>
+    <h2 id="middleware">Middleware</h2>
     <p><strong>auth</strong>: A middleware for user authentication to protect certain routes.</p>
 
-    <h2>Database Connection</h2>
+    <h2 id="database-connection">Database Connection</h2>
     <p>The application connects to MongoDB using the provided connection string in the <code>.env</code> file. Ensure MongoDB is running before starting the server.</p>
 
-    <h2>Environment Variables</h2>
+    <h2 id="environment-variables">Environment Variables</h2>
     <p>The following environment variables are required:</p>
     <ul>
         <li><strong>PORT</strong>: The port on which the server will run (default is 5000).</li>
@@ -159,4 +208,8 @@ MONGODB_URI=mongodb://&lt;username&gt;:&lt;password&gt;@localhost:27017/votingap
 
     <h2>Contributing</h2>
     <p>Contributions are welcome! If you would like to contribute, please create a pull request or open an issue to discuss changes.</p>
+
+</body>
+</html>
+
 
