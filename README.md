@@ -1,50 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voting App Backend</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        h2, h3 {
-            color: #34495e;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ddd;
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-    </style>
-</head>
-<body>
 
     <h1>Voting App Backend</h1>
     <p>Welcome to the <strong>Voting App backend</strong>! This application allows users to register, log in, and vote for candidates in an election. The backend is built using <strong>Node.js</strong>, <strong>Express</strong>, and <strong>MongoDB</strong>.</p>
@@ -206,10 +159,6 @@ MONGODB_URI=mongodb://&lt;username&gt;:&lt;password&gt;@localhost:27017/votingap
         <li><strong>MONGODB_URI</strong>: The MongoDB connection string.</li>
     </ul>
 
-    <h2>Contributing</h2>
-    <p>Contributions are welcome! If you would like to contribute, please create a pull request or open an issue to discuss changes.</p>
 
-</body>
-</html>
 
 
